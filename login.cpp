@@ -7,7 +7,7 @@ using namespace std;
 
 bool logincheck(const string& username, const string& pwd) //function to check if login credentials is validd
 {
-    ifstream userIndex("users.txt");
+    ifstream userIndex("data/users.txt");
     string existUser, existPwd; //existing usernames and password inside userindex file
 
     if (userIndex.is_open()){
