@@ -3,6 +3,6 @@
 
 #include <string>
 
-bool logincheck(const std:: string& username, const std::string& password); //const so no changes
+bool logincheck(const std:: string& username, const std::string& pwd); //const so no changes
 
 #endif

@@ -1,4 +1,7 @@
 #include <iostream>
+#include <fstream>
+#include <string>
+#include "login.h"
 
 using namespace std;
 
@@ -18,7 +21,7 @@ int main()
         cout << "Please enter your password: ";
         cin >> password; //stores input in password
 
-    //logincheck(username,password)
+    logincheck(username,password); //calls logincheck function to verify user login details
     }
     
     string search;
