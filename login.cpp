@@ -26,7 +26,18 @@ bool logincheck(const string& username, const string& pwd) //function to check i
         cerr<<"Error when opening this file \n"; //error message if file is not found or cannot be opened
         return false;
     }
+}
 
-    
-    
+void registerUser(const string& username, const string& pwd){
+    ofstream userIndex("data/users.txt", ios::app); //append data in users.txt
+    if(userIndex.is_open()){
+        cout<<"Saving details...\n";
+        userIndex<< username<< " "<< pwd;
+        userIndex.close();
+        cout<<"Registration successful!\n";
+    }
+    else{
+        cerr<<"Error with opening file for registration.";
+    }
+
 }
