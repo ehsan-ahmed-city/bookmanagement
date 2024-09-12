@@ -30,14 +30,15 @@ bool logincheck(const string& username, const string& pwd) //function to check i
 
 void registerUser(const string& username, const string& pwd){
     ofstream userIndex("data/users.txt", ios::app); //append data in users.txt
+
     if(userIndex.is_open()){
+
         cout<<"Saving details...\n";
-        userIndex<< username<< " "<< pwd;
+        userIndex<<"\n"<<username<< " "<< pwd<<"\n";
         userIndex.close();
         cout<<"Registration successful!\n";
     }
     else{
-        cerr<<"Error with opening file for registration.";
+        cerr<<"Error with opening file for registration."; //error message if file cannot be opened
     }
-
 }
