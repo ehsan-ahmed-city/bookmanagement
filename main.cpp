@@ -23,7 +23,11 @@ int main()
         cout << "Please enter your password: ";
         cin >> password; //stores input in password
 
-    logincheck(username,password); //calls logincheck function to verify user login details
+        bool check = logincheck(username,password); //calls logincheck function to verify user login details
+        if(!check){
+            cout<<"exiting program due to incorrect login";
+            return 0;//exit the program
+        }
     }else{
         cout << "Please enter your username: ";
         cin >> username; //stores input in username
@@ -31,7 +35,11 @@ int main()
         cout << "Please enter your password: ";
         cin >> password; //stores input in password
 
-        registerUser(username, password);
+        bool login_success = registerUser(username, password); //checks if registration is successful
+        if(!login_success){
+            cout<<"exiting program due to existing username";
+            return 0; //exits program if registration is unsuccessful
+        }
     }
     
     string search;

@@ -4,6 +4,6 @@
 #include <string>
 
 bool logincheck(const std:: string& username, const std::string& pwd); //const so no changes
-void registerUser(const std:: string& username, const std::string& pwd);
+bool registerUser(const std:: string& username, const std::string& pwd);
 
 #endif
